@@ -76,8 +76,10 @@ class CustomerFollowUp:
         (MEDIUM, 'Medium'),
         (HIGH, 'High'),
         (URGENT, 'Urgent')
-    ],
+    ]
 
+
+class CustomerFollowUpType:
     PENDING = 'pending'
     IN_PROGRESS = 'in progress'
     COMPLETED = 'completed'
@@ -91,8 +93,7 @@ class CustomerFollowUp:
     ]
 
 
-class Alert:
-
+class AlertTypes:
     STOCK = 'stock'
     PAYMENT = 'payment'
     SALES = 'sales'
@@ -101,7 +102,7 @@ class Alert:
     FOLLOW_UP = 'follow_up'
     SYSTEM = 'system'
 
-    ALERT_TYPES_CHOICES = [
+    CHOICES = [
         ('STOCK', 'موجودی کم'),
         ('PAYMENT', 'پرداخت دیرکرد'),
         ('SALES', 'هدف فروش'),
@@ -109,16 +110,18 @@ class Alert:
         ('PRICE', 'تغییر قیمت'),
         ('FOLLOW_UP', 'پیگیری'),
         ('SYSTEM', 'سیستمی')
-    ],
+    ]
 
+
+class AlertPriorities:
     LOW = 'low'
     MEDIUM = 'medium'
     HIGH = 'high'
     CRITICAL = 'critical'
 
-    PRIORITY_LEVELS_CHOICES = [
-        ('LOW', 'کم'),
-        ('MEDIUM', 'متوسط'),
-        ('HIGH', 'زیاد'),
-        ('CRITICAL', 'بحرانی')
+    CHOICES = [
+        (LOW, 'کم'),
+        (MEDIUM, 'متوسط'),
+        (HIGH, 'زیاد'),
+        (CRITICAL, 'بحرانی')
     ]

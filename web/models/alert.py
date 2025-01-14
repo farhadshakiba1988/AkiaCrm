@@ -1,13 +1,13 @@
 from django.db import models
 from django.utils import timezone
 
-from web.config.constants import Alert
+from web.config.constants import AlertTypes, AlertPriorities
 
 
 class Alert(models.Model):
     """Model for system alerts and notifications"""
-    type = models.CharField(max_length=20, choices=Alert.ALERT_TYPES_CHOICES)
-    priority = models.CharField(max_length=10, choices=Alert.PRIORITY_LEVELS_CHOICES)
+    type = models.CharField(max_length=20, choices=AlertTypes.CHOICES)
+    priority = models.CharField(max_length=10, choices=AlertPriorities.CHOICES)
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     resolved = models.BooleanField(default=False)
