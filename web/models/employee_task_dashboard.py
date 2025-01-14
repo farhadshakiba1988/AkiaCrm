@@ -1,5 +1,6 @@
 from django.utils import timezone
 
+from web.models import Alert
 from web.models.customer_follow_up import CustomerFollowUp
 
 
