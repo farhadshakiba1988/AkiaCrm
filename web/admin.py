@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from web.models import Employee, ProductCategory, EmployeeExpertise, Customer, CustomerInteraction, Sale, \
-    PerformanceMetric, Territory, Product, SaleItem
+    PerformanceMetric, Territory, Product, SaleItem, Alert, CustomerFollowUp, EmployeeTaskDashboard
 
 admin.site.register(Employee)
 admin.site.register(ProductCategory)
@@ -13,3 +13,6 @@ admin.site.register(PerformanceMetric)
 admin.site.register(Territory)
 admin.site.register(Product)
 admin.site.register(SaleItem)
+admin.site.register(Alert)
+admin.site.register(CustomerFollowUp)
+admin.site.register(EmployeeTaskDashboard)

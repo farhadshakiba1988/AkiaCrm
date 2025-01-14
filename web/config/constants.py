@@ -58,7 +58,67 @@ class SaleStatus:
     CANCELLED = 'cancelled'
 
     CHOICES = [
-        ('pending', 'Pending'),
-        ('completed', 'Completed'),
-        ('cancelled', 'Cancelled')
+        (PENDING, 'Pending'),
+        (COMPLETED, 'Completed'),
+        (CANCELLED, 'Cancelled')
+    ]
+
+
+class CustomerFollowUp:
+    """Model for tracking customer follow-up tasks"""
+    LOW = 'low'
+    MEDIUM = 'medium'
+    HIGH = 'high'
+    URGENT = 'urgent'
+
+    PRIORITY_CHOICES = [
+        (LOW, 'Low'),
+        (MEDIUM, 'Medium'),
+        (HIGH, 'High'),
+        (URGENT, 'Urgent')
+    ],
+
+    PENDING = 'pending'
+    IN_PROGRESS = 'in progress'
+    COMPLETED = 'completed'
+    FAILED = 'failed'
+
+    STATUS_CHOICES = [
+        (PENDING, 'Pending'),
+        (IN_PROGRESS, 'In Progress'),
+        (COMPLETED, 'Completed'),
+        (FAILED, 'Failed')
+    ]
+
+
+class Alert:
+
+    STOCK = 'stock'
+    PAYMENT = 'payment'
+    SALES = 'sales'
+    CUSTOMER = 'customer'
+    PRICE = 'price'
+    FOLLOW_UP = 'follow_up'
+    SYSTEM = 'system'
+
+    ALERT_TYPES_CHOICES = [
+        ('STOCK', 'موجودی کم'),
+        ('PAYMENT', 'پرداخت دیرکرد'),
+        ('SALES', 'هدف فروش'),
+        ('CUSTOMER', 'فعالیت مشتری'),
+        ('PRICE', 'تغییر قیمت'),
+        ('FOLLOW_UP', 'پیگیری'),
+        ('SYSTEM', 'سیستمی')
+    ],
+
+    LOW = 'low'
+    MEDIUM = 'medium'
+    HIGH = 'high'
+    CRITICAL = 'critical'
+
+    PRIORITY_LEVELS_CHOICES = [
+        ('LOW', 'کم'),
+        ('MEDIUM', 'متوسط'),
+        ('HIGH', 'زیاد'),
+        ('CRITICAL', 'بحرانی')
     ]

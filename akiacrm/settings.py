@@ -74,27 +74,27 @@ TEMPLATES = [
 WSGI_APPLICATION = 'akiacrm.wsgi.application'
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('POSTGRES_DB', 'test'),
-        'USER': os.environ.get('POSTGRES_USER', 'test'),
-        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', '123@456'),
-        'HOST': 'db',
-        'PORT': '5432',
-    }
-}
-
 # DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": "dbtest",
-#         "USER": "postgres",
-#         "PASSWORD": "test",
-#         "HOST": "127.0.0.1",
-#         "PORT": "5432",
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get('POSTGRES_DB', 'test'),
+#         'USER': os.environ.get('POSTGRES_USER', 'test'),
+#         'PASSWORD': os.environ.get('POSTGRES_PASSWORD', '123@456'),
+#         'HOST': 'db',
+#         'PORT': '5432',
 #     }
 # }
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "dbtest",
+        "USER": "postgres",
+        "PASSWORD": "test",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
+    }
+}
 
 
 # Password validation

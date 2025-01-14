@@ -8,3 +8,6 @@ from .performance_metric import PerformanceMetric
 from .territory import Territory
 from .product import Product
 from .sale_item import SaleItem
+from .alert import Alert
+from .customer_follow_up import CustomerFollowUp
+from .employee_task_dashboard import EmployeeTaskDashboard
